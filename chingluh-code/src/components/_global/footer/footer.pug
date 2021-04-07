@@ -1,0 +1,61 @@
+footer(setBackground="./img/bg-footer.png")
+	.footer-1
+		.container 
+			.footer-top
+				.row 
+					.col-lg-4.col-sm-6
+						.footer-title Contact us
+						ul
+							li
+								.img 
+									img(data-src="./img/mail.png" alt="" class="lazyload")
+								a(href="mailto:aaa@gmail.com") communications@chingluh.com 
+							li
+								.img 
+									img(data-src="./img/phone.png" alt="" class="lazyload")
+								a(href="tel:+54444") 0123456789
+					.col-lg-4.col-sm-6
+						.footer-title quick link
+						ul
+							-for(i=0; i<5; i++)
+								li
+									a(href="") 
+										em.material-icons circle
+										span Who we are
+					.col-lg-4
+						.footer-title FOLLOW US
+						.social
+							a(href="").social-item
+								em.fab.fa-facebook-f
+							a(href="").social-item
+								em.fab.fa-linkedin-in
+	.footer-2 
+		.container
+			.wrap-footer
+				.coppy-right
+					p © 2021 Ching Luh Group. All rights reserved.&nbsp;
+						a(href="https://www.canhcam.vn/thiet-ke-website-chuyen-nghiep") Website designed
+						|&nbsp; by &nbsp;
+						a(href='https://www.canhcam.vn' target='_blank') Canh Cam
+				ul.d-flex
+					li 
+						a(href="") Terms of use
+					li 
+						a(href="") Privacy Policy
+					li 
+						a(href="") Sitemap
+
+
+	//- 		.wraper-content.d-flex.align-center
+	//- 			p.design-by-canhcam.color-white.f-14
+	//- 				|© 2020 Sakos.
+	//- 				a(href='https://www.canhcam.vn/thiet-ke-website-chuyen-nghiep' target='_blank') Thiết kế website
+	//- 				| bởi
+	//- 				a(href='https://www.canhcam.vn' target='_blank')  Canh Cam
+	//- 			ul.d-flex
+	//- 				li 
+	//- 					a(href="") Điều khoản và điều kiện
+	//- 				li
+	//- 					a(href="") Chính sách bảo mật
+	//- 				li
+	//- 					a(href="") Sơ đồ trang web

@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Tin Tức'
+	- var bodyClass = 'news-page'
+
+block main
+	include ../components/banner/pagebanner.pug
+	include ../components/_global/breadcrumb/breadcrumb.pug
+	include ../components/_news/List/index.pug

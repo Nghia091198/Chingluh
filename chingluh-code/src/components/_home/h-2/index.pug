@@ -1,0 +1,22 @@
+section.section.home-2 
+	.container 
+		.wrap-title 
+			.section-title latest news
+			a(href="").btn.btn-primary View all
+		.row
+			-for(i=1; i<4; i++)
+				.col-md-4.col-sm-12 
+					.wrap-news 
+						.newsitem 
+							.date 
+								em.material-icons date_range
+								time March, 15, 2021
+							.title.text-uppercase OUR COMMUNITY “LIFT AS WE RISE”
+							.briefcontent 
+								p Dear Colleagues: Happy New Year! Time flies. As the New Year 2018 begins, let us also start anew. When the New Year comes, everyone joyfully welcomes the New Year, and congratulates to each other in the New Year moments, I, on behalf of the Management Board, like to send the New Year greetings to all of you and thanks for your hard work over the past year.
+							a(href="").link-viewmore 
+								em.lnr.lnr-arrow-right-circle
+								span View more
+						.newsimage 
+							a(href="").img.zoom-img 
+								img(data-src="./img/news/"+i+".png" alt="" class="lazyload")

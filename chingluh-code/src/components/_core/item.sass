@@ -1,0 +1,29 @@
+.wrap-news
+	cursor: pointer
+	.newsitem
+		padding: r(30px)
+		background: $cl-f6
+		transition: .3s all ease-in-out
+		.title
+			color: $black
+			letter-spacing: 1.8px
+			font-weight: 700
+			margin-bottom: r(20px)
+			line-height: r(24px)
+			+line(2)
+		.briefcontent
+			+line(3)
+			margin-bottom: r(30px)
+			line-height: r(22px)
+		&:hover
+			background-image: $gradient
+			transition: .3s all ease-in-out
+			*
+				color: $white !important
+				transition: .3s all ease-in-out
+			.link-viewmore
+				em
+					transform: translateX(5px)
+					transition: .3s all ease-in-out
+				span
+					text-decoration: underline

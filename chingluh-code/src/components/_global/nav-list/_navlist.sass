@@ -1,0 +1,30 @@
+// .sticky-wrapper
+// 	margin-top: -20px
+	.primary-nav
+		padding: r(20px) 0
+.primary-nav
+	margin-bottom: r(20px)
+	padding-bottom: r(10px)
+	display: flex
+	align-items: center
+	background-color: $white
+	overflow-x: auto
+	&::-webkit-scrollbar
+		height: 2px
+	li
+		a
+			+dc
+			width: max-content
+			padding: r(10px) r(25px)
+			border: 1px solid $main
+			border-radius: 23px
+			color: $main
+			background-color: $tran
+			transition: .3s all ease-in-out
+		&.active a,
+		&:hover a
+			background-color: $main
+			color: $white
+		& + li
+			margin-left: 20px
+

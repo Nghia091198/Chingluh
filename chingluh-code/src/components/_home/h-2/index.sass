@@ -1,0 +1,8 @@
+.home-2
+	.wrap-news
+		.newsimage
+			.img
+				+img-ratio(170/390)
+	@media screen and ( max-width: 767.9px )
+		[class*='col-']:not(:last-child)
+			margin-bottom: r(30px)

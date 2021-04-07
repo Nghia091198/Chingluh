@@ -1,0 +1,21 @@
+section.section.home-4
+	.container 
+		.wrap-title 
+			.section-title our PARTNERS
+			a(href="").btn.btn-primary View all
+	.no-container
+		.swiper-partner
+			.swiper-container 
+				.swiper-wrapper
+					-for(i=1; i<5; i++)
+						.swiper-slide
+							.wrap-item
+								.item
+									a(href="").img 
+										img(data-src="./img/partner/"+i+".png" alt="" class="lazyload")
+									.inner-content.desc
+										p Partnership #[br]since 1993
+								.desc.text-uppercase.mt-30
+									a(href="") NIKE
+	.container
+		.swiper-pagination

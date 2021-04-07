@@ -1,0 +1,14 @@
+section#home-banner 
+	.home-banner 
+		.swiper-container
+			.swiper-wrapper
+				-for(i=1; i<3; i++)
+					.swiper-slide
+						.wrap-banner
+							.img
+								img.lazyload(data-src="./img/banner/"+i+".png" alt="")
+							.wrap-inner.bl-title
+								.title To be recognized as the leader in the development and supply of innovative and sustainable athletic footwear.
+							.wrap-inner.icon
+								.btn-scrolldown
+									em.material-icons expand_more

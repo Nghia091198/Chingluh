@@ -1,0 +1,45 @@
+section.section.news-detail-page
+	.container
+		.row
+			.col-md-10.col-sm-12.mx-auto
+				.section-title Vietnam Ching Luh was awarded 2016 top 100 sustainable business in Vietnam
+				.wrap-social 
+					.date 
+						em.material-icons date_range
+						time March, 15, 2021
+					.social 
+						a(href="").socail__item
+							em.material-icons thumb_up
+							span Like
+						a(href="").socail__item
+							em.fab.fa-facebook-f 
+							span Share
+				.fullcontent
+					p Vietnam Ching Luh has received Top 100 Sustainable Business Award in Vietnam 2016 launched by Vietnam Chamber of Commerce and Industry (VCCI) in Hanoi on November 8. Ching Luh Global OS Head Steve Lee was on behalf of the company to receive the award.
+					img(data-src="./img/news/2.png" alt="" class="lazyload")
+
+secion.news-related
+	.container
+		.section-title Other News
+		.swiper-news-related 
+			.swiper-container 
+				.swiper-wrapper 
+					-for(i=1;i<7;i++)
+						.swiper-slide 
+							.wrap-news 
+								.newsitem 
+									.date 
+										em.material-icons date_range
+										time March, 15, 2021
+									.title.text-uppercase OUR COMMUNITY “LIFT AS WE RISE”
+									.briefcontent 
+										p Dear Colleagues: Happy New Year! Time flies. As the New Year 2018 begins, let us also start anew. When the New Year comes, everyone joyfully welcomes the New Year, and congratulates to each other in the New Year moments, I, on behalf of the Management Board, like to send the New Year greetings to all of you and thanks for your hard work over the past year.
+									a(href="").link-viewmore 
+										em.lnr.lnr-arrow-right-circle
+										span View more
+								.newsimage 
+									a(href="").img.zoom-img
+										img(data-src="./img/news/"+i+".png" alt="" class="lazyload")
+			.swiper-button 
+				.button-next
+				.button-prev

@@ -1,0 +1,28 @@
+.wrap-title
+	display: flex
+	justify-content: space-between
+.section-title
+	font-size: r(30px)
+	font-weight: 700
+	color: $main
+	text-transform: uppercase
+	letter-spacing: 3px
+	margin-bottom: r(30px)
+	line-height: r(40px)
+	@media screen and ( max-width: 1023.9px )
+		font-size: r(26px)
+	@media screen and ( max-width: 767.9px )
+		font-size: r(24px)
+	&.no-letter
+		letter-spacing: normal
+	&.color-text
+		color: $cl-text
+	&.color-white
+		color: $white
+
+.desc,
+.brief-content
+	color: $cl-text
+	letter-spacing: 1.6px
+	&.color-white
+		color: $white

@@ -1,0 +1,46 @@
+#home-banner
+	.home-banner
+		position: relative
+		.wrap-banner
+			position: relative
+			width: 100vw
+			+img-ratio(875/1920)
+			@media screen and ( max-width: 500px )
+				min-height: 60vh
+			&::before
+				content: ""
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				position: absolute
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0) 50%)
+				z-index: 2
+			.wrap-inner
+				z-index: 3
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				@media screen and ( max-width: 600px )
+					width: 100%
+					text-align: center
+				&.bl-title
+					bottom: 80px
+					text-align: center
+					.title
+						color: $white
+						font-size: r(30px)
+						font-weight: 300
+						@media screen and ( max-width: 767.9px )
+							font-size: r(20px)
+						@media screen and ( max-width: 600px )
+							padding: 0 r(40px)
+				&.icon
+					bottom: 0px
+					.btn-scrolldown
+						animation: 1.5s scroll-wheel infinite alternate
+					em
+						font-size: r(72px)
+						color: $main
+					&:hover
+						cursor: pointer

@@ -1,0 +1,221 @@
+header
+	// position: fixed
+	// top: 0
+	// left: 0
+	// width: 100%
+	// transition: .3s all  ease-in-out
+	// height: 100px
+	.header
+		position: fixed
+		background-color: #000033
+		z-index: 994
+		top: 0
+		left: 0
+		width: 100%
+		padding: r(20px) 0 r(10px)
+		border-bottom: 2px solid #0069b3
+	.header-2
+		transform: translateY(-100%)
+		transition: .4s all ease-in-out
+	.header-1
+		transform: translateY(0)
+		transition: .4s all ease-in-out
+	&.active
+		.header-1
+			transform: translateY(-100%)
+		.header-2
+			transform: translateY(0)
+	.wrap-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.toggle-menu
+			+dc
+			color: $white
+			text-transform: uppercase
+			cursor: pointer
+			span
+				display: inline-block
+				padding-left: 5px
+		.logo
+			display: block
+			@media screen and ( max-width: 480px )
+				max-width: 70px
+			@media screen and ( max-width: 375px )
+				max-width: 60px
+		.wrap-right
+			display: flex
+			.language
+				display: flex
+				align-items: center
+				text-transform: uppercase
+				margin-right: 15px
+				color: $white
+				cursor: pointer
+				position: relative
+				.language-dropdown
+					+hidden
+					+dc
+					position: absolute
+					top: 100%
+					left: 0
+					transition: .3s all ease-in-out
+					width: 100%
+					height: 100%
+					background-color: $main
+				em
+					transform: rotate(0)
+					transition: .3s all ease-in-out
+				&:hover
+					.language-dropdown
+						+visible
+					em
+						transform: rotate(-180deg)
+						
+			.search
+				border-radius: 100%
+				width: 29px
+				height: 29px
+				background-color: $main
+				position: relative
+				cursor: pointer
+				em
+					position: absolute
+					bottom: 0
+					right: 0
+					color: $white
+
+.wrap-menu
+	+hidden
+	position: fixed
+	height: 100%
+	background-color: rgba($main, .9)
+	left: 0
+	transform: translateX(-100%)
+	z-index: 999
+	width: 320px
+	transition: .4s all ease-in-out
+	ul.primary-menu
+		color: $white
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		padding: r(50px)
+		li
+			padding: r(20px) 0
+	.dropdown
+		.title
+			display: flex
+			align-items: center
+			position: relative
+			a
+				position: relative
+				display: inline-block
+				transition: .3s all ease-in-out
+			em
+				position: absolute
+				left: 0
+				transform: translateX(-10rem)
+				transition: .3s all ease-in-out
+				+hidden
+		&.active
+			.title
+				a
+					padding-left: r(15px)
+				em
+					position: relative
+					+visible
+					transform: translateX(0)
+			> .title
+					font-weight: 700
+		.sub-menu
+			position: static
+			top: 100%
+			padding-left: r(50px)
+			display: none
+			.title
+				font-size: r(12px)
+				padding-top: r(10px)
+				a
+					&:hover
+						text-decoration: underline
+	&.active
+		+visible
+		transform: translateX(0)
+		transition: .4s all ease-in-out
+		ul
+			> li
+				-webkit-transition: all 0.5s
+				-moz-transition: all 0.5s
+				-o-transition: all 0.5s
+				transition: all 0.5s
+				-webkit-animation-duration: 0.5s
+				animation-duration: 0.5s
+				-webkit-animation-fill-mode: both
+				animation-fill-mode: both
+				-webkit-animation-name: moveInLeft
+				animation-name: moveInLeft
+				&:not(:last-child)
+					border-bottom: 1px solid $cl-eb
+				&:nth-child(1)
+					animation-delay: .5s
+				&:nth-child(2)
+					animation-delay: .6s
+				&:nth-child(3)
+					animation-delay: .7s
+				&:nth-child(4)
+					animation-delay: .8s
+				&:nth-child(5)
+					animation-delay: .9s
+			
+							
+	.btn-close
+		position: absolute
+		color: $white
+		font-weight: 700
+		right: 10px
+		top: 10px
+		cursor: pointer
+		z-index: 995
+		em
+			pointer-events: none
+	
+.wrap-search
+	+dc
+	+hidden
+	position: fixed
+	left: 0
+	width: 100%
+	background-color: $main
+	z-index: 995
+	transform: translateY(-100%)
+	padding: r(60px) 0
+	transition: .4s all ease-in-out
+	&.active
+		+visible
+		transform: translateY(0)
+	.searchbox
+		+dc
+		width: 100%
+		input
+			width: 30%
+			border-radius: 25px
+			border: thin solid $tran
+			padding: r(8px) r(15px)
+			font-size: r(14px)
+			letter-spacing: 1.1px
+		button
+			+dc
+			margin-left: r(15px)
+			width: 140px
+			border-radius: 25px
+			background-color: rgba($main-2, .8)
+			color: $white
+			border: 1px solid rgba(0, 0, 51, 0.8)
+			transition: .3s all ease-in-out
+			padding: r(8px) 0
+			em
+				font-size: r(26px)
+			&:hover
+				background-color: $white
+				color: $main
+				border: 1px solid $tran

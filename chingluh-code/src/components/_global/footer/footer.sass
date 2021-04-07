@@ -1,0 +1,86 @@
+footer
+	background-color: $main-2
+	background-size: contain !important
+	background-repeat: no-repeat
+	.footer-1
+		border-bottom: 1px solid #0069b3
+		.footer-top
+			padding: r(80px) 0 r(60px)
+			@media screen and ( max-width: 767.9px )
+				[class*='col']:not(:last-child)
+					margin-bottom: r(30px)
+			.footer-title
+				font-weight: 700
+				letter-spacing: 1.6px
+				text-transform: uppercase
+				color: $white
+				margin-bottom: r(30px)
+			ul
+				li
+					display: flex
+					align-items: center
+					color: $white
+					letter-spacing: 1.6px
+					a
+						display: inline-block
+						em
+							color: $main
+							font-size: 8px
+							padding-right: 15px 
+						span
+							opacity: .75
+						&:hover
+							span
+								text-decoration: underline
+					.img
+						padding-right: 10px
+					&:not(:last-child)
+						margin-bottom: 20px
+			.social
+				display: flex
+				.social-item
+					background-color: $white
+					+dc
+					width: 50px
+					height: 50px
+					border-radius: 100%
+					transition: .3s all ease-in-out
+					em
+						color: #0c5ea9
+						font-size: 18px
+					&:not(:last-child)
+						margin-right: 15px
+					&:hover
+						background-color: #0c5ea9
+						em
+							color: $white
+	.footer-2
+		padding: r(30px) 0
+		*
+			color: $white
+			font-size: 12px
+			opacity: .9
+			letter-spacing: 1.4
+		.wrap-footer
+			display: flex
+			justify-content: space-between
+			@media screen and ( max-width: 767.9px )
+				display: block
+			ul
+				@media screen and ( max-width: 767.9px )
+					padding-top: 10px
+				li
+					position: relative
+					&:not(:last-child)
+						margin-right: 15px
+					&:last-child
+						&::before
+							display: none
+					&::before
+						content: ""
+						position: absolute
+						width: 1px
+						height: 100%
+						background-color: rgba($white, .5)
+						right: -7.5px
+					

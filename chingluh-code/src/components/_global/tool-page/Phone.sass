@@ -1,0 +1,110 @@
+@keyframes phone-outer
+	0%
+		transform: translate3d(0, 0, 0) scale(1)
+		box-shadow: 0 0 0 0em rgba($main, 0), 0em 0.05em 0.1em rgba(#000000, 0.2)
+
+	33.3333%
+		transform: translate3d(0, 0, 0) scale(1.1)
+		box-shadow: 0 0 0 0em rgba($main, 0.1), 0em 0.05em 0.1em rgba(#000000, 0.5)
+
+	66.6666%
+		transform: translate3d(0, 0, 0) scale(1)
+		box-shadow: 0 0 0 0.5em rgba($main, 0), 0em 0.05em 0.1em rgba(#000000, 0.2)
+
+	100%
+		transform: translate3d(0, 0, 0) scale(1)
+		box-shadow: 0 0 0 0em rgba($main, 0), 0em 0.05em 0.1em rgba(#000000, 0.2)
+@keyframes phone-inner
+	0%
+		opacity: 1
+		transform: translate3d(0, 0, 0) scale(0)
+
+	33.3333%
+		opacity: 1
+		transform: translate3d(0, 0, 0) scale(0.9)
+
+	66.6666%
+		opacity: 0
+		transform: translate3d(0, 0, 0) scale(0)
+
+	100%
+		opacity: 0
+		transform: translate3d(0, 0, 0) scale(0)
+@keyframes phone-icon
+	0%
+		transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg)
+
+	10%
+		transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg)
+
+	20%
+		transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg)
+
+	30%
+		transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg)
+
+	40%
+		transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg)
+
+	50%
+		transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg)
+
+	100%
+		transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg)
+
+.Phone
+	position: relative
+	display: block
+	margin: 0
+	width: 50px
+	height: 50px
+	font-size: 20px
+	background-color: $main
+	border-radius: 50%
+	box-shadow: 0 0 0 0em rgba($main, 0), 0em 0.05em 0.1em rgba(#000000, 0.2)
+	transform: translate3d(0, 0, 0) scale(1)
+.Phone
+	&::before, &::after
+		position: absolute
+		content: ""
+
+	&::before
+		top: 0
+		left: 0
+		width: 50px
+		height: 50px
+		background-color: rgba(#fff, 0.1)
+		border-radius: 100%
+		opacity: 1
+		transform: translate3d(0, 0, 0) scale(0)
+
+.Phone::after
+	top: 0.25em
+	left: 0.25em
+	width: 0.5em
+	height: 0.5em
+	
+	transform: translate3d(0, 0, 0)
+
+.Phone.is-animating 
+	animation: phone-outer 3000ms infinite
+
+	&::before
+		animation: phone-inner 3000ms infinite
+
+	&::after 
+		animation: phone-icon 3000ms infinite
+
+#phone
+	position: relative
+	&::before
+		position: absolute
+		content: "call"
+		font-family: "Material Icons"
+		z-index: 3
+		color: $white
+		top: 50%
+		left: 50%
+		pointer-events: none
+		font-size: 20px
+		animation: phone-icon 3000ms infinite
